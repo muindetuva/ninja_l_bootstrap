@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Net Ninja Pro - the Book</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.min.css">
 
     <style>
         section {
@@ -69,7 +69,9 @@
                     <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
                 </div>
                 <div class="col-md-5 text-center d-none d-md-block">
-                    <img class="img-fluid" src="/assets/ebook-cover.png" alt="Ebook cover">
+                    <span class="tt" data-bs-placement="bottom" title="Net Ninja book cover">
+                        <img class="img-fluid" src="/assets/ebook-cover.png" alt="Ebook cover">
+                    </span>
                 </div>
             </div>
         </div>
@@ -238,7 +240,7 @@
 
 
     <!-- Reviews List11 -->
-    <secion class="bg-light" id="reviews">
+    <section class="bg-altlight" id="reviews">
         <div class="container-lg">
             <div class="text-center">
                 <h2><i class="bi bi-stars"></i>Book Reviews</h2>
@@ -302,7 +304,7 @@
             </div>
 
         </div>
-    </secion>
+    </section>
 
 
     <section id="contact">
@@ -322,6 +324,11 @@
                                 <i class="bi bi-envelope-fill"></i>
                             </span>
                             <input type="email" class="form-control" id="email" placeholder="e.g mario@mail.com">
+                            <span class="input-group-text">
+                                <span class="tt" data-bs-placement="right" title="Enter an email that works">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
                         </div>
 
 
@@ -331,6 +338,11 @@
                                 <i class="bi bi-person-fill"></i>
                             </span>
                             <input type="text" id="name" class="form-control" placeholder="e.g Mario">
+                            <span class="input-group-text">
+                                <span class="tt" data-bs-placement="right" title="Pretty self explanatory">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
                         </div>
 
 
@@ -363,9 +375,56 @@
     </section>
 
 
+    <section class="bg-light">
+        <div class="text-center">
+            <h2>Stay in the loop</h2>
+            <p class="lead">Get the latest updates as they happen...</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="text-muted my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
+                    repudiandae. Quod, esse perferendis tempora vitae voluptatem odit. Dolorum dolorem illo similique,
+                    nemo enim blanditiis inventore vitae quas, repudiandae cum possimus excepturi cupiditate repellendus
+                    eius nisi totam vero, voluptates amet maiores.</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">Register for
+                    updates</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="reg-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Get the Latest Updates</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, perferendis animi! Ipsa animi
+                        illum, quia numquam repellendus assumenda quibusdam consectetur ratione debitis fuga nobis iure
+                        cumque impedit excepturi dolore obcaecati.</p>
+                    <label for="modal-email" class="form-label">Your email address</label>
+                    <input type="text" id="modal-email" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+            new bootstrap.Tooltip(t)
+        })
+    </script>
 </body>
 
 </html>
